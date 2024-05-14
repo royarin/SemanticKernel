@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "description": "Suggests top 5 things to do in a city",
+  "execution_settings": {
+    "default": {
+      "max_tokens": 1000,
+      "temperature": 0.0
+    }
+  },
+  "input_variables": [
+    {
+      "name": "city",
+      "description": "City for which to suggest Things to Do",
+      "default": "",
+      "is_required": true
+    }
+  ]
+}

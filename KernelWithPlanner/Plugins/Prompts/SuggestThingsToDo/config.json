@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "description": "Suggests top 5 things to do in a city based on the current weather",
+  "execution_settings": {
+    "default": {
+      "max_tokens": 1000,
+      "temperature": 0.0
+    }
+  },
+  "input_variables": [
+    {
+      "name": "city",
+      "description": "City for which to suggest Things to Do",
+      "default": "",
+      "is_required": true
+    },
+    {
+      "name": "temperature",
+      "description": "Current temperature of the city for which suggestions are made for Things to do",
+      "default": "",
+      "is_required": true
+    }
+  ]
+}

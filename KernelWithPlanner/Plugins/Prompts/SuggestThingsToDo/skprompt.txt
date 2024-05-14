@@ -1,0 +1,8 @@
+﻿## INSTRUCTIONS
+Suggest the top 5 things to do in {{$city}} based on the current weather temperature {{$temperature}}.
+List them in order of distance from the city center. 
+Show the current temperature in {{$city}} and the top 5 things to do in {{$city}} based on the current weather temperature using the following format:
+
+## OUTPUT
+The current temperature in {{$city}} is {{$temperature}}.
+Based on the current weather, here are the top 5 things to do in {{$city}}:
