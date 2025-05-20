@@ -31,10 +31,17 @@ var kernel = kernelBuilder.Build();
 
 // Example 1. Invoke the kernel with a prompt and display the result
 var prompt = "What are the things to do in Utrecht?";
-var response = await kernel.InvokePromptAsync(prompt);
+// Create execution settings for OpenAI - required in newer versions of Semantic Kernel
+// Without this, the InvokePromptAsync method will not work correctly
+OpenAIPromptExecutionSettings openAIPromptExecutionSettings = new()
+{
+    // Configure any specific settings needed
+};
+// Pass execution settings to the invoke method
+var response = await kernel.InvokePromptAsync(prompt, new(openAIPromptExecutionSettings));
 
 // Example 2. Invoke the kernel with a templated prompt and display the result
-//KernelArguments arguments = new()
+//KernelArguments arguments = new(openAIPromptExecutionSettings)
 //{
 //    {
 //        "city", "Utrecht"
